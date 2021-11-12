@@ -1,0 +1,151 @@
+.footer {
+  background-color: $bg-dark;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 121px;
+    background-color: #666666;
+    @include _768 {
+      bottom: 104px;
+    }
+    @include _420 {
+      bottom: 93px;
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 87px 0 50px;
+    @include _1024 {
+      padding: 65px 0 50px;
+    }
+    @include _768 {
+      padding: 53px 90px 40px 0;
+      flex-direction: column;
+    }
+    @include _420 {
+      padding: 42px 0;
+    }
+  }
+  &__top-left {
+    display: flex;
+    justify-content: space-between;
+    max-width: 705px;
+    width: 100%;
+    @include _1024 {
+      max-width: 542px;
+    }
+    @include _768 {
+      max-width: 100%;
+      margin-bottom: 42px;
+    }
+    @include _600 {
+      flex-wrap: wrap;
+    }
+    @include _420 {
+      display: block;
+    }
+  }
+  &__top-logo {
+    @include _420 {
+      margin-bottom: 40px;
+    }
+  }
+  &__top-logosvg {
+    @include _420 {
+      margin-right: 10px;
+    }
+  }
+  &__top-nav {
+    max-width: 365px;
+    width: 100%;
+    @include _768 {
+      font-size: 18px;
+    }
+    @include _420 {
+      max-width: 100%;
+      font-size: 16px;
+    }
+  }
+  &__top-list {
+    display: flex;
+    justify-content: space-between;
+    @include _420 {
+      display: none;
+    }
+  }
+  &__minnav-list {
+    display: none;
+    @include _420 {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__minnav-boxitem {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__top-item:first-child {
+    @include _1366 {
+      margin-left: 37px;
+    }
+    @include _768 {
+      margin-left: 27px;
+    }
+    @include _420 {
+      margin-left: 0;
+    }
+  }
+  &__top-boxitem {
+    margin-bottom: 25px;
+    @include _1024 {
+      margin-bottom: 32px;
+    }
+  }
+  &__top-boxitem:last-child {
+    margin-bottom: 0;
+  }
+  &__top-link {
+    color: #fff;
+    transition: 0.3s;
+  }
+  &__top-link:hover {
+    color: $font-gold;
+  }
+  &__top-link:active {
+    color: $font-gold--active;
+  }
+  &__social {
+    align-self: flex-end;
+    flex-wrap: wrap;
+    @include _420 {
+      margin: 0 auto;
+      max-width: 260px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 50px 0;
+    @include _1024 {
+      font-size: 22px;
+    }
+    @include _768 {
+      padding: 40px 0;
+    }
+    @include _420 {
+      font-size: 16px;
+    }
+  }
+  &__bottom-item:nth-child(2) {
+    @include _420 {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.contacts {
+  padding: 75px 0 74px;
+  @include _1024 {
+    padding: 55px 0 61px;
+  }
+  @include _768 {
+    padding: 40px 0 67px;
+  }
+  @include _420 {
+    padding-bottom: 44px;
+  }
+  &__title {
+    margin-bottom: 103px;
+    @include _1024 {
+      margin-bottom: 73px;
+    }
+    @include _768 {
+      margin-bottom: 63px;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include _768 {
+      display: block;
+    }
+  }
+  &__info {
+    max-width: 331px;
+    @include _768 {
+      margin-bottom: 40px;
+    }
+  }
+  &__info-title {
+    font-weight: 500;
+    font-size: 28px;
+    max-width: 227px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 50px;
+    @include _1024 {
+      max-width: 195px;
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+    @include _768 {
+      font-size: 20px;
+      margin-bottom: 44px;
+      max-width: 170px;
+      line-height: 1.1;
+    }
+    @include _420 {
+      font-weight: 800;
+      max-width: 135px;
+      font-size: 16px;
+      margin-bottom: 45px;
+    }
+  }
+  &__link {
+    display: block;
+    font-style: normal;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 25px;
+    letter-spacing: 0;
+    transition: color 0.3s;
+    @include _1024 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    @include _768 {
+      font-size: 18px;
+    }
+    @include _420 {
+      font-size: 16px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & + &:hover {
+      color: $font-gold;
+    }
+    & + &:active {
+      color: $font-gold--active;
+    }
+  }
+  &__map {
+    max-width: 960px;
+    width: 100%;
+    height: 620px;
+    @include _1024 {
+      max-width: 694px;
+      height: 454px;
+    }
+    @include _768 {
+      max-width: 100%;
+      height: 476px;
+    }
+    @include _420 {
+      height: 248px;
+    }
+  }
+}
+
+.marker {
+  display: block;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}

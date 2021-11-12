@@ -1,0 +1,138 @@
+.explore {
+  padding: 90px 0 75px;
+  color: #fff;
+  @include _1024 {
+    padding: 69px 0 60px;
+  }
+  @include _768 {
+    padding: 54px 0 40px;
+  }
+  @include _420 {
+    padding: 55px 0 40px;
+  }
+  &__inner {
+    display: flex;
+    @include _1024 {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    margin-right: 60px;
+    @include _1024 {
+      margin-right: 0;
+      margin-bottom: 55px;
+    }
+    @include _768 {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    margin-top: -13px;
+    margin-bottom: 103px;
+    color: #fff;
+    @include _1366 {
+      margin-bottom: 83px;
+    }
+    @include _1024 {
+      margin-bottom: 75px;
+    }
+    @include _768 {
+      margin-bottom: 63px;
+    }
+  }
+  &__text {
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.75;
+    margin-bottom: 25px;
+    max-width: 662px;
+    width: 100%;
+    span {
+      color: #caaa7d;
+    }
+    @include _1024 {
+      max-width: 100%;
+      margin-bottom: 0;
+      line-height: 1.9;
+      letter-spacing: 0;
+      font-size: 20px;
+    }
+    &:last-child {
+      @include _1024 {
+        display: none;
+      }
+    }
+    @include _768 {
+      display: none;
+    }
+  }
+  &__slider {
+    position: relative;
+    max-width: 718px;
+    height: 700px;
+    width: 100%;
+    @include _1024 {
+      display: block;
+      max-width: 720px;
+      margin-top: 83px;
+      margin: 0 auto;
+    }
+    @include _768 {
+      margin-top: 0;
+      height: 705px;
+      max-width: 100%;
+    }
+    @include _420 {
+      height: 368px;
+    }
+  }
+  &__slider-container {
+    position: relative;
+    height: 700px;
+  }
+  &__slider-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    &:last-child {
+      @include _768 {
+        display: none;
+      }
+    }
+    img {
+      display: block;
+      width: 718px;
+      height: 700px;
+      object-fit: cover;
+      @include _1366 {
+        width: 500px;
+      }
+      @include _1024 {
+        width: 720px;
+      }
+      @include _768 {
+        max-width: 720px;
+        width: 100%;
+      }
+      @include _420 {
+        height: auto;
+      }
+    }
+  }
+  &__comp-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    width: 39px;
+    height: 100%;
+    top: 0;
+    background-image: url("./../assets/svg/explore-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include _768 {
+      display: none;
+    }
+  }
+}
